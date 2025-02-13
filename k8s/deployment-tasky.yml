@@ -1,4 +1,8 @@
 # Main tasky-app deployment
+# need to add secret for MONGODB_URI string
+# create secret using:
+# kubectl create secret generic tasky-secret --from-literal=MONGODB_URI='mongodb://<USER>:<PASSWORD>@<HOST>:<PORT>' -n tasky
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
