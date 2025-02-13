@@ -6,5 +6,9 @@ Different scripts used in project
   
 mongobackup.sh - performs backup for mongodb - needs to set local secret files for user/pass/host.
 
+## K8s
+Different deployment files  
+
+tasky-deployment.yaml - all the k8s deployement for EKS.
 
 
