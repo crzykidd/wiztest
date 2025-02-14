@@ -30,6 +30,19 @@ spec:
                 secretKeyRef:
                   name: tasky-secret
                   key: MONGODB_URI
+          securityContext:
+            privileged: true
+          volumeMounts:
+          - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+            name: sa-token
+      volumes:
+      - name: sa-token
+        projected:
+          sources:
+          - serviceAccountToken:
+              path: token
+              expirationSeconds: 3600
+              audience: kubernetes            
 ---
 # setup service details
 apiVersion: v1
