@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: tasky-app
-          image: crzykidd/tasky-app:8c41e70
+          image: crzykidd/tasky-app:21448b9
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
