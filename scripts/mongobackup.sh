@@ -1,6 +1,6 @@
 #!/bin/bash
 #enable script debuging. 
-set -x
+#set -x
 #check if script is running
 LOCK_FILE="/home/mander/bin/mongobackup.lock"
 if [ -f "$LOCK_FILE" ]; then
@@ -11,8 +11,6 @@ else
 
 
   # Set variables
-
-  mongodb_hostport.secret  mongodb_pass.secret  mongodb_user.secret
   #get mongo connection info
   BINDIR="/home/mander/bin"
   MONGODB_HOSTPORT=$(cat $BINDIR/mongodb_hostport.secret)
